@@ -1,0 +1,19 @@
+{
+  "name": "proyectofinal-node",
+  "version": "1.0.0",
+  "description": "Proyecto Final de Node.js",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^6.14.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ProyectoFinal"
+  },
+  "author": "adrian45hdez",
+  "license": "ISC"
+}
