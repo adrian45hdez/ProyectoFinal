@@ -3,7 +3,7 @@ const user = express.Router();
 const db = require('../config/database');
 const jwt = require('jsonwebtoken');
 
-user.post("/signin", async (req, res, next) => {
+user.post("/signin", async (req, res, next) => {//Funciona perfecto
     const { user_name, user_mail, user_password } = req.body;
 
     if (user_name && user_mail && user_password) {
@@ -19,7 +19,7 @@ user.post("/signin", async (req, res, next) => {
     return res.status(500).json({ code: 500, message: "Campos incompletos" });
 });
 
-user.post("/login", async (req, res, next) => {
+user.post("/login", async (req, res, next) => {//Funciona perfecto
     const { user_mail, user_password } = req.body;
     
     const query = `SELECT * FROM user WHERE user_mail = '${user_mail}' AND user_password = '${user_password}';`;
@@ -40,23 +40,5 @@ user.post("/login", async (req, res, next) => {
     return res.status(500).json({ code: 500, message: "Campos incompletos" });
 
 });
-
-/*user.get("/", async (req, res, next) => {
-    (req, res, next) => {
-        try {
-            const token = req.headers.authorization.split(" ")[1];
-            const decoded = jwt.verify(token, "debugkey");
-            req.user = decoded;
-            next();
-        }
-        catch (error) {
-            return res.status(401).json({ code: 401, message: "No tienes permiso" });
-        }
-    }
-    const query = "SELECT * FROM user";
-    const rows = await db.query(query);
-
-    return res.status(200).json({ code: 200, message: rows })
-})*/
 
 module.exports = user;
