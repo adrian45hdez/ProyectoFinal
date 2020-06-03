@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="../1-css/bootstrap.min.css">
+</head>
+<style>
+    .BarraSuperior {
+        background-color: cadetblue;
+        height: 4rem;
+        color: white;
+        font-family: fantasy;
+    }
+
+    .Cuadro {
+        background-color: rgb(204, 203, 203);
+        border-radius: 15px;
+    }
+
+    .Entradas input {
+        width: 70%;
+        height: 3rem;
+        border-radius: 15px;
+    }
+
+    .boton {
+        width: 8rem;
+        height: 4rem;
+        border-radius: 15px;
+        border: none;
+        background-color: rgb(24, 163, 24);
+        color: white;
+    }
+</style>
+
+<body>
+    <div class="BarraSuperior">
+        <div class="container">
+            <div class="row BarraSuperior">
+                <div class="col-12 align-self-center">
+                    <b>Empresa Taller de Node.js</b> <sup>®</sup>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container Cuadro my-5">
+        <div class="row">
+            <div class="col-12 align-self-center text-center">
+                <h1 class="display-4">Buscar empleados por su nombre</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="row justify-content-center Entradas">
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-12">
+                        <input type="text" placeholder="  Nombre del empleado" class="Izquierda my-5 input-group-append">
+                    </div>
+                    <div class="col-12">
+                        <input type="text" placeholder="  Apellido del empleado" class="mb-5">
+                    </div>
+                </div>
+            </div>
+            <div class="col-4 align-self-center">
+                <button class="boton"><b>Buscar empelado</b></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="../1-js/bootstrap.min.js"></script>
+</body>
+
+</html>
