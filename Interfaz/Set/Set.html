@@ -6,9 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
     <link rel="stylesheet" href="../1-css/bootstrap.min.css">
-    <script src="../JS/Delete.js"></script>
+    <script src="../JS/Set.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head><style>
+</head>
+<style>
     .BarraSuperior {
         background-color: cadetblue;
         height: 4rem;
@@ -20,17 +21,19 @@
         background-color: rgb(204, 203, 203);
         border-radius: 15px;
     }
-    .Entradas input{
+
+    .Entradas input {
         width: 70%;
         height: 3rem;
         border-radius: 15px;
     }
-    .boton{
-        width: 9rem;
+
+    .boton {
+        width: 80%;
         height: 4rem;
         border-radius: 15px;
         border: none;
-        background-color: rgb(218, 53, 53);
+        background-color: rgb(24, 163, 24);
         color: white;
     }
     #Resultado{
@@ -38,7 +41,6 @@
         font-size: 1vw;
         margin-bottom: 2rem;
     }
-
 </style>
 
 <body>
@@ -54,25 +56,44 @@
     <div class="container Cuadro my-5">
         <div class="row">
             <div class="col-12 align-self-center text-center">
-                <h1 class="display-4">Eliminar un empleado</h1>
+                <h1 class="display-4">Modificar empleado existente</h1>
             </div>
         </div>
         <hr>
-        <div class="row justify-content-center Entradas" id="ContenidoInput">
-                <div class="col-sm-12 col-md-8 ">
-                    <div class="row">
-                        <div class="col-12">
-                            <input type="text" placeholder="  Ingresa el ID del empleado a eliminar"
-                                class="Izquierda my-5 input-group-append" id="id">
-                        </div>
+        <div class="containter Entradas" id="ContenidoInput">
+            <div class="row justify-content-center">
+                <input type="text" class="my-3"placeholder="Ingresa el ID del empleado a modificar" id="id">
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-sm-12 col-md-8">
+                    <div class="col-12 mb-5">
+                        <input type="text" placeholder="Nombre del empleado" id="input-nombre">
+                    </div>
+                    <div class="col-12 mb-5">
+                        <input type="text" placeholder="Apellido del empleado" id="input-apellido">
+                    </div>
+                    <div class="col-12 mb-5">
+                        <input type="text" placeholder="Teléfono del empleado" id="input-telefono">
+                    </div>
+                    <div class="col-12 mb-5">
+                        <input type="text" placeholder="Correo electrónico del empleado" id="input-correo">
+                    </div>
+                    <div class="col-12 mb-5">
+                        <input type="text" placeholder="Direccion del empleado" id="input-direccion">
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-4  align-self-center">
-                    <button class="boton mb-5" id="EliminarEmpleado"><b>Eliminar Empleado</b></button>
+                <div class="col-sm-12 col-md-4 align-self-center">
+                    <div class="row align-self-center">
+                        <button class="boton" id="ModificarEmpleado">Modificar empleado</button>
+                    </div>
                 </div>
+            </div>
         </div>
         <div class="row">
-            <div class="col-12" id="Resultado"></div>
+            <div class="col-12" id="Resultado">
+
+            </div>
         </div>
     </div>
 

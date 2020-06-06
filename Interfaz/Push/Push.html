@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
     <link rel="stylesheet" href="../1-css/bootstrap.min.css">
+    <script src="../JS/Push.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <style>
     .BarraSuperior {
@@ -34,6 +36,11 @@
         background-color: rgb(24, 163, 24);
         color: white;
     }
+    #Resultado{
+        text-align: center;
+        font-size: 1vw;
+        margin-bottom: 2rem;
+    }
 </style>
 
 <body>
@@ -53,30 +60,35 @@
             </div>
         </div>
         <hr>
-        <div class="container Entradas">
+        <div class="container Entradas" id="ContenidoInput">
             <div class="row">
                 <div class="col-sm-12 col-md-8">
                     <div class="col-12 mb-5">
-                        <input type="text" placeholder="Nombre del empleado">
+                        <input type="text" placeholder="Nombre del empleado" id="input-nombre">
                     </div>
                     <div class="col-12 mb-5">
-                        <input type="text" placeholder="Apellido del empleado">
+                        <input type="text" placeholder="Apellido del empleado" id="input-apellido">
                     </div>
                     <div class="col-12 mb-5">
-                        <input type="text" placeholder="Teléfono del empleado">
+                        <input type="text" placeholder="Teléfono del empleado" id="input-telefono">
                     </div>
                     <div class="col-12 mb-5">
-                        <input type="text" placeholder="Correo electrónico del empleado">
+                        <input type="text" placeholder="Correo electrónico del empleado" id="input-correo">
                     </div>
                     <div class="col-12 mb-5">
-                        <input type="text" placeholder="Direccion del empleado">
+                        <input type="text" placeholder="Direccion del empleado" id="input-direccion">
                     </div>
                 </div>
                 <div class="col-sm-12 col-md-4 align-self-center">
                     <div class="row align-self-center">
-                        <button class="boton">Crear empleado</button>
+                        <button class="boton" id="CrearEmpleado">Crear empleado</button>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="Resultado">
+
             </div>
         </div>
     </div>

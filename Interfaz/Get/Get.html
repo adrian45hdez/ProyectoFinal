@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Document</title>
     <link rel="stylesheet" href="../1-css/bootstrap.min.css">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../JS/Get.js"></script>
+
 </head>
 <style>
     .BarraSuperior {
@@ -34,6 +37,11 @@
         background-color: rgb(24, 163, 24);
         color: white;
     }
+    #Resultado{
+        text-align: center;
+        font-size: 1vw;
+        margin-bottom: 2rem;
+    }
 </style>
 
 <body>
@@ -53,20 +61,23 @@
             </div>
         </div>
         <hr>
-        <div class="row justify-content-center Entradas">
+        <div class="row justify-content-center Entradas" id="ContenidoInput">
             <div class="col-8">
                 <div class="row">
                     <div class="col-12">
-                        <input type="text" placeholder="  Nombre del empleado" class="Izquierda my-5 input-group-append">
+                        <input type="text" id="Nom" placeholder="  Nombre del empleado" class="Izquierda my-5 input-group-append">
                     </div>
                     <div class="col-12">
-                        <input type="text" placeholder="  Apellido del empleado" class="mb-5">
+                        <input type="text" id="Ape" placeholder="  Apellido del empleado" class="mb-5">
                     </div>
                 </div>
             </div>
             <div class="col-4 align-self-center">
-                <button class="boton"><b>Buscar empelado</b></button>
+                <button class="boton" id="BuscarEmpleado"><b>Buscar empelado</b></button>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-12" id="Resultado"></div>
         </div>
     </div>
 
