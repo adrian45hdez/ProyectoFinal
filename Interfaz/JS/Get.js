@@ -19,6 +19,9 @@ function Buscar() {
         data: {
             name: nombre,
             apellido: apell
+        },
+        headers: {
+            'Authorization': "bearer " + localStorage.getItem("token")
         }
     }).then(function (res) {
         if (res.data.code === 200) {

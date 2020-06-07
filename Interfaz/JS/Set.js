@@ -27,6 +27,9 @@ function Modificar() {
             telefono: telefonoH,
             correo: correoH,
             direccion: direccionH
+        },
+        headers: {
+            'Authorization': "bearer " + localStorage.getItem("token")
         }
     }).then(function (res) {
         if (res.data.code === 200) {

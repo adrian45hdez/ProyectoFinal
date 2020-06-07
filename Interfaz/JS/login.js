@@ -22,8 +22,6 @@ function login() {
         if (res.data.code === 200) {
             localStorage.setItem("token", res.data.message);
             window.location.href = "../Principal/Principal.html"
-
-
         }
         else {
             alert("Usuario y/o Contraseña erroneos");

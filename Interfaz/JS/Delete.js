@@ -17,6 +17,9 @@ function Eliminar() {
         url: Vurl,
         data: {
             empleadoID: EmpleadoID
+        },
+        headers: {
+            'Authorization': "bearer " + localStorage.getItem("token")
         }
     }).then(function (res) {
         if (res.data.code === 200) {
