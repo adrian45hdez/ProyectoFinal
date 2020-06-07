@@ -1,5 +1,5 @@
 window.onload = init;//Le decimos que cunado el navegador cargue inicie la funcion init
-var Vurl = "http://localhost:3000/empleados/push";
+var Vurl = "https://empresataller.herokuapp.com/empleados/push";
 
 function init() {
     document.querySelector('#CrearEmpleado').addEventListener('click', Crear);
